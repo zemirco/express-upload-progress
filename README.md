@@ -7,3 +7,7 @@ Sample application to demonstrate file uploading with express.js. The upload pro
 [express-upload-progress.herokuapp.com/](http://express-upload-progress.herokuapp.com/)
 
 Uploaded files are automatically deleted after 1 min.
+
+## Requirements
+
+Works with the following browsers - [http://caniuse.com/#feat=xhr2](http://caniuse.com/#feat=xhr2)
