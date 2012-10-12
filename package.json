@@ -1,0 +1,11 @@
+{
+  "name": "express-upload-progress",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.0rc5",
+    "jade": "*"
+  }
+}
