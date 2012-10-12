@@ -3,20 +3,20 @@ $(function() {
   $('input[type="submit"]').on('click', function(evt) {
     evt.preventDefault();
     $('div.progress').show();
-  	var formData = new FormData();
+    var formData = new FormData();
     var file = document.getElementById('myFile').files[0];
     formData.append('myFile', file);
     
-		var xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     
-		xhr.open('post', '/', true);
+    xhr.open('post', '/', true);
     
-		xhr.upload.onprogress = function(e) {
-			if (e.lengthComputable) {
-				var percentage = (e.loaded / e.total) * 100;
+    xhr.upload.onprogress = function(e) {
+      if (e.lengthComputable) {
+        var percentage = (e.loaded / e.total) * 100;
         $('div.progress div.bar').css('width', percentage + '%');
-			}
-		};
+      }
+    };
     
     xhr.onload = function() {
       $('div.progress').hide();
@@ -24,7 +24,7 @@ $(function() {
       $('div.alert').show();
     }
     
-		xhr.send(formData);
+    xhr.send(formData);
     
   })
   
