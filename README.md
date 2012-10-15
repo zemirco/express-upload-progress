@@ -8,6 +8,8 @@ Sample application to demonstrate file uploading with [express.js](http://expres
 
 Uploaded files are automatically deleted after 1 min.
 
+Maximum file size is 2MB.
+
 ## Requirements
 
 Works with the following browsers - [http://caniuse.com/#feat=xhr2](http://caniuse.com/#feat=xhr2)
