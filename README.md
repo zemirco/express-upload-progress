@@ -14,7 +14,17 @@ Maximum file size is 2MB.
 
 	git clone https://github.com/timothybone/express-upload-progress
 
+Navigate to root directory:
+
 	npm install
+
+Then:
+
+	mkdir tmp
+
+to start:
+
+	node app.js
 
 ## Requirements
 
