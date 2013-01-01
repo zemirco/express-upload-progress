@@ -10,6 +10,12 @@ Uploaded files are automatically deleted after 1 min.
 
 Maximum file size is 2MB.
 
+## get started:
+
+	git clone https://github.com/timothybone/express-upload-progress
+
+	npm install
+
 ## Requirements
 
 Works with the following browsers - [http://caniuse.com/#feat=xhr2](http://caniuse.com/#feat=xhr2)
