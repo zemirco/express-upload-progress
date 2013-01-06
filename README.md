@@ -12,6 +12,8 @@ Maximum file size is 2MB.
 
 ## Requirements
 
+A `tmp` directory to store the uploaded files.
+
 Works with the following browsers - [http://caniuse.com/#feat=xhr2](http://caniuse.com/#feat=xhr2)
 
 ## License
