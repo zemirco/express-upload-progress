@@ -18,7 +18,13 @@ $(function() {
       }
     };
     
+    xhr.onerror = function(e) {
+      console.log('error occured');
+      console.log(e)
+    }
+    
     xhr.onload = function() {
+      console.log('test')
       $('div.progress').hide();
       $('strong.message').text(this.statusText)
       $('div.alert').show();
