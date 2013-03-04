@@ -4,7 +4,7 @@ $(function() {
     $('div.progress').hide();
     $('strong.message').text(message);
     $('div.alert').show();
-  }
+  };
   
   $('input[type="submit"]').on('click', function(evt) {
     evt.preventDefault();
@@ -26,14 +26,14 @@ $(function() {
     
     xhr.onerror = function(e) {
       showInfo('An error occurred while submitting the form. Maybe your file is too big');
-    }
+    };
     
     xhr.onload = function() {
       showInfo(this.statusText);
-    }
+    };
     
     xhr.send(formData);
     
-  })
+  });
   
 });

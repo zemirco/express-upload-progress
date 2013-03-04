@@ -28,12 +28,12 @@ app.configure('development', function(){
 
 app.get('/', function(req, res) {
   res.render('index');
-})
+});
 
 app.post('/', function(req, res) {
   deleteAfterUpload(req.files.myFile.path);
   res.end();
-})
+});
 
 // Start the app
 
@@ -43,13 +43,13 @@ http.createServer(app).listen(app.get('port'), function(){
 
 // Private functions
 
-var fs = require('fs')
+var fs = require('fs');
 
 var deleteAfterUpload = function(path) {
   setTimeout( function(){
     fs.unlink(path, function(err) {
       if (err) console.log(err);
       console.log('file successfully deleted');
-    })
-  }, 60 * 1000)
-}
+    });
+  }, 60 * 1000);
+};
