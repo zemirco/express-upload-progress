@@ -19,14 +19,14 @@ $(function() {
     };
     
     xhr.onerror = function(e) {
-      console.log('error occured');
-      console.log(e)
+      $('div.progress').hide();
+      $('strong.message').text('An error occurred while submitting the form. Maybe your file is too big');
+      $('div.alert').show();
     }
     
     xhr.onload = function() {
-      console.log('test')
       $('div.progress').hide();
-      $('strong.message').text(this.statusText)
+      $('strong.message').text(this.statusText);
       $('div.alert').show();
     }
     
