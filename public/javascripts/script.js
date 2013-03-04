@@ -1,5 +1,11 @@
 $(function() {
   
+  var showInfo = function(message) {
+    $('div.progress').hide();
+    $('strong.message').text(message);
+    $('div.alert').show();
+  }
+  
   $('input[type="submit"]').on('click', function(evt) {
     evt.preventDefault();
     $('div.progress').show();
@@ -19,15 +25,11 @@ $(function() {
     };
     
     xhr.onerror = function(e) {
-      $('div.progress').hide();
-      $('strong.message').text('An error occurred while submitting the form. Maybe your file is too big');
-      $('div.alert').show();
+      showInfo('An error occurred while submitting the form. Maybe your file is too big');
     }
     
     xhr.onload = function() {
-      $('div.progress').hide();
-      $('strong.message').text(this.statusText);
-      $('div.alert').show();
+      showInfo(this.statusText);
     }
     
     xhr.send(formData);
